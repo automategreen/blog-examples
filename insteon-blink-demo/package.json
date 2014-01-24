@@ -15,5 +15,8 @@
   "dependencies": {
     "commander": "~2.0.0",
     "home-controller": "~0.3.0"
+  },
+  "bin": {
+    "insteon-blink-demo": "bin/insteon-blink-demo"
   }
 }
