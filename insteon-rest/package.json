@@ -1,0 +1,19 @@
+{
+  "author": "Brandon Goode <brandon@automategreen.com>",
+  "name": "insteon-rest",
+  "description": "Simplistic rest API demo of Insteon switch control",
+  "version": "1.0.0",
+  "main": "./app.js",
+  "homepage": "https://github.com/automategreen/blog-examples/tree/master/insteon-rest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/automategreen/blog-examples"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "dependencies": {
+    "home-controller": "0.3.*",
+    "express": "~4.1.1"
+  }
+}

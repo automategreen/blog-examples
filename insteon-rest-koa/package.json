@@ -1,0 +1,20 @@
+{
+  "author": "Brandon Goode <brandon@automategreen.com>",
+  "name": "insteon-rest-koa",
+  "description": "Simplistic rest API demo of Insteon switch control using koa",
+  "version": "1.0.0",
+  "main": "./app.js",
+  "homepage": "https://github.com/automategreen/blog-examples/tree/master/insteon-rest-koa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/automategreen/blog-examples"
+  },
+  "engines": {
+    "node": ">= 0.11"
+  },
+  "dependencies": {
+    "home-controller": "0.4.*",
+    "koa": "~0.6.0",
+    "koa-route": "~1.1.4"
+  }
+}
