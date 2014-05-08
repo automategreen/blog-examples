@@ -31,7 +31,7 @@ function *turnOn(id) {
 function *turnOff(id) {
   var status = yield hub.light(id).turnOff();
   if(status.response) {
-    this.body='off';
+    this.body = 'off';
   }
 }
 
@@ -39,7 +39,7 @@ function *tempUp(id) {
   var therm = hub.thermostat(id);
   var status = yield therm.tempUp();
   if(status.response) {
-    this.body = yield therm.temp();
+    this.body = yield therm.setpoints();
   }
 }
 
@@ -47,7 +47,7 @@ function *tempDown(id) {
   var therm = hub.thermostat(id);
   var status = yield therm.tempDown();
   if(status.response) {
-    this.body = yield therm.temp();
+    this.body = yield therm.setpoints();
   }
 }
 
