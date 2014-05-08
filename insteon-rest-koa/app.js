@@ -17,6 +17,9 @@ app.use(function *(next){
 app.use(route.get('/light/:id/on', turnOn));
 app.use(route.get('/light/:id/off', turnOff));
 
+app.use(route.get('/thermostat/:id/up', tempUp));
+app.use(route.get('/thermostat/:id/down', tempDown));
+
 
 function *turnOn(id) {
   var status = yield hub.light(id).turnOn();
@@ -29,6 +32,22 @@ function *turnOff(id) {
   var status = yield hub.light(id).turnOff();
   if(status.response) {
     this.body='off';
+  }
+}
+
+function *tempUp(id) {
+  var therm = hub.thermostat(id);
+  var status = yield therm.tempUp();
+  if(status.response) {
+    this.body = yield therm.temp();
+  }
+}
+
+function *tempDown(id) {
+  var therm = hub.thermostat(id);
+  var status = yield therm.tempDown();
+  if(status.response) {
+    this.body = yield therm.temp();
   }
 }
 
